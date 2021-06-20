@@ -12,10 +12,15 @@ Also deployed on Heroku Cloud:
 Open [https://tv2-weather-node.herokuapp.com/](https://tv2-weather-node.herokuapp.com/) to view it in the browser.
 
 You can send GET requests direcly if on localhost e.g.
+
 http://localhost/?city=Frederiksberg
+
 http://localhost/?city=Valby
+
 Or if you want to use the heroku deployment:
+
 https://tv2-weather-node.herokuapp.com/?city=Frederiksberg
+
 https://tv2-weather-node.herokuapp.com/?city=Valby
 
 
