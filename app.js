@@ -25,12 +25,12 @@ app.get("/", async (req, res) => {
         res.send(weatherData);
 });
 
-fetchCityWeatherData =  async city =>{
-     const weatherData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},dk&appid=1b272266e337e917edc3c2053e6100b7`)
+fetchCityWeatherData = async city => {
+    const weatherData = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},dk&appid=1b272266e337e917edc3c2053e6100b7`)
         .then(data => data.json())
         .then(prepareObject)
         .catch(err => { console.log(err); return "Unable to fetch data" });
-     return weatherData;   
+    return weatherData;
 
 }
 
@@ -46,7 +46,7 @@ prepareObject = data => {
         return "City not found";
 }
 
-setJSFlag = query =>{
+setJSFlag = query => {
     if (query === "disabled")
         return false;
     else if (query === "enabled")
@@ -100,9 +100,11 @@ preparePage = (weatherData) => {
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-<h2>Velkommen til din lokale vejrudsigt!</h2>
+<div class="info" style="margin: auto; text-align: center;">
+            <h2>Velkommen til din lokale vejrudsigt!</h2>
 			<p>Her finder du temperatur i din by, fugtighed og vindmåleren i meter per sekund (m/s).</p>
-  <div class="widget" style="margin: 10px; width: 300px;">
+   </div>
+  <div class="widget" style="margin-top: 10px; margin-left: auto; margin-right: auto; width: 300px;">
     <div class="panel panel-info">
       <div class="panel-heading">Weather in <b>${weatherData.city ? weatherData.city : "N/A"}</b></div>
       <ul class="list-group">
