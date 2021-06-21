@@ -27,6 +27,10 @@ https://tv2-weather-node.herokuapp.com/?city=Valby
 Finally you can also use the UI of the deployed frontend React app: Open https://tv-weather-react.herokuapp.com/ to view it in the browser.
 If Javascript is disabled you will be redirected to the Node backend app automatically.
 
+It can be used as a widget with iframe.
+Just add the iframe tag to your html eg.
+<iframe src="https://tv2-weather-node.herokuapp.com/?city=Copenhagen" width="450" height="450"></iframe>
+
 ## Other Available Scripts
 
 In the project directory, you can run:
