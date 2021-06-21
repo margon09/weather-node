@@ -10,6 +10,8 @@ Runs the app in the development mode.\
 Open [http://localhost/](http://localhost/) to view it in the browser.
 Also deployed on Heroku Cloud:
 Open [https://tv2-weather-node.herokuapp.com/](https://tv2-weather-node.herokuapp.com/) to view it in the browser.
+Bear in mind that the Heroku deployment goes into sleep-mode when no requests are sent as I'm using the free dynos.
+It takes roughly 20 seconds to load on the browser, after which it works normally and goes back to sleep after 30 minutes of inactivity.
 
 You can send GET requests direcly if on localhost e.g.
 
